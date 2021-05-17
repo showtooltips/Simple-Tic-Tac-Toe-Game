@@ -6,7 +6,6 @@ using namespace std;
 //Array para exibir o tabuleiro
 char tabuleiro[3][3] = {{'1','2','3'}, {'4','5','6'}, {'7','8','9'}};
 
-//Variáveis
 int escolha;
 int linha, coluna;
 char turno = 'X';
@@ -39,14 +38,14 @@ void turno_jogador(){
         cout << "Turno do Jogador - 2 [O]: ";
     }
     
-    //Recebendo o entrada do jogador
+    //Recebendo a entrada do jogador
     
     //Atualizando o tabuleiro de acordo com a escolha e redistribuindo o início do turno
 
     cin >> escolha;
     cout << "\n";
 
-    //switch case para receber que linha e coluna será atualizada
+    //Estrutura seletiva para receber qual linha e coluna serão atualizadas
 
     switch(escolha){
         case 1: linha=0; coluna=0; break;
@@ -80,7 +79,7 @@ void turno_jogador(){
 		turno_jogador();
 	}
 	
-	mostrar_tabuleiro();
+	system("cls");
 }
 
 //Função para obter o estado do jogo, como JOGO VENCIDO, EMPATE OU JOGO EM CONTINUIDADE
@@ -96,7 +95,7 @@ bool gameover(){
 	if(tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[0][0] == tabuleiro[2][2] || tabuleiro[0][2] == tabuleiro[1][1] && tabuleiro[0][2] == tabuleiro[2][0])
 	return false;
 	
-	//Verificando se o jogo continua ou não
+	//Verificando se o jogo continua ou nÃ£o
 	for(int i=0; i<3; i++)
 	for(int j=0; j<3; j++)
 	if(tabuleiro[i][j] !='X' && tabuleiro[i][j] != 'O')
@@ -126,4 +125,6 @@ bool gameover(){
 	}
 	else
 		cout << "\nEmpate!";
+
+	return 0;
 }
