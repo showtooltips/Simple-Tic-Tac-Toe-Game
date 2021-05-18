@@ -95,7 +95,7 @@ bool gameover(){
 	if(tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[0][0] == tabuleiro[2][2] || tabuleiro[0][2] == tabuleiro[1][1] && tabuleiro[0][2] == tabuleiro[2][0])
 	return false;
 	
-	//Verificando se o jogo continua ou n√£o
+	//Verificando se o jogo continua ou n„o
 	for(int i=0; i<3; i++)
 	for(int j=0; j<3; j++)
 	if(tabuleiro[i][j] !='X' && tabuleiro[i][j] != 'O')
